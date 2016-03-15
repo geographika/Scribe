@@ -279,7 +279,7 @@ def closeFiles(files):
 
 def jsonToMap(content, outputDirectory, mapName, clean):
     global MAP, LAYERS, VAR, SCALES
-    data = json.loads(content)
+    data = json.loads(content, strict=False)
 
     MAP = data["MAP"]
     LAYERS = data["LAYERS"]
